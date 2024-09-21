@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="expenses-tracker-app">
+      <h1>Expense Tracker App</h1>
+
+      <div class="wrapper__expenses-tracker-app">
+        <div class="col-4 budget-column">
+          <h2>Enter your budget</h2>
+          <p>
+            Your current budget is:
+            <span class="value-wrapper"
+              ><span class="total-budget-amount">$0.00</span></span
+            >
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              class="budget-input"
+              placeholder="0"
+              data-max-limit="100000"
+              data-min-limit="1"
+              data-input-name="budget"
+            />
+            <input
+              type="submit"
+              class="submit-budget primary-submit"
+              data-input-name="budget"
+              value="Enter budget"
+            />
+            <input
+              type="submit"
+              class="reset-budget secondary-submit"
+              data-input-name="budget"
+              value="Reset budget"
+            />
+          </div>
+
+          <h2>Add your expenses here...</h2>
+
+          <div class="input-group">
+            <label for="expense-name"
+              >Expense Category
+              <select class="expense-categories">
+                <option value="Food" data-badge-color="orange">Food</option>
+                <option value="Shopping" data-badge-color="red">
+                  Shopping
+                </option>
+                <option value="Entertainment" data-badge-color="green">
+                  Entertainment
+                </option>
+                <option value="Others" data-badge-color="purple">Others</option>
+              </select>
+            </label>
+
+            <label for="expense-value"
+              >Expense Value
+              <input
+                id="expense-value"
+                type="number"
+                class="expense-value"
+                placeholder="0"
+                data-max-limit="100000"
+                data-min-limit="1"
+                data-input-name="expense"
+              />
+            </label>
+
+            <input
+              type="submit"
+              class="submit-expense primary-submit"
+              value="Add Expense"
+              data-input-name="expense"
+            />
+          </div>
+        </div>
+
+        <div class="col-4 expenses-list-column">
+          <h2>List of your expenses</h2>
+
+          <div class="expenses-list-wrapper">
+            <ul class="expenses-list"></ul>
+          </div>
+
+          <div class="total-expenses totals-box">
+            Total Expenses:
+            <span class="value-wrapper"
+              ><span class="total-expenses-amount">$0.00</span></span
+            >
+          </div>
+          <div class="total-budget-left totals-box">
+            Budget left:
+            <span class="value-wrapper"
+              ><span class="total-budget-left-amount">$0.00</span></span
+            >
+          </div>
+          <div class="total-budget totals-box">
+            Total budget:
+            <span class="value-wrapper"
+              ><span class="total-budget-amount">$0.00</span></span
+            >
+          </div>
+        </div>
+
+        <div class="col-4 expenses-chart-box">
+          <h2>Chart of your expenses</h2>
+          <div class="expenses-chart-wrapper-box"></div>
+          <canvas id="expenses-chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

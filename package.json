@@ -1,0 +1,30 @@
+{
+  "name": "budget-tracking-app",
+  "version": "1.0.0",
+  "description": "",
+  "source": "frontend/index.html",
+  "scripts": {
+    "dev": "nodemon backend/app.js",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "ie >= 11"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "express": "^4.19.2",
+    "notyf": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "parcel": "^2.12.0"
+  }
+}
