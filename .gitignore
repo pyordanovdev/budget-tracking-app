@@ -10,4 +10,4 @@ yarn-debug.log*
 .vite
 .DS_Store
 Thumbs.db
-"frontend/js/script copy.js"
+script_copy.js
