@@ -237,4 +237,7 @@ input.validation-error {
     grid-template-columns: 100%;
     gap: 1.25rem;
   }
+  .expense-categories {
+    min-width: 100%;
+  }
 }
