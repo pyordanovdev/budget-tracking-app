@@ -2,6 +2,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightblue;
 }
+* {
+  box-sizing: border-box;
+}
 .expenses-tracker-app {
   width: 100%;
   height: 100%;
@@ -9,8 +12,8 @@ body {
 .wrapper__expenses-tracker-app {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
-  width: 75%;
+  gap: 3rem;
+  width: 85%;
   margin: 0 auto;
   background-color: #fff;
   padding: 30px;
@@ -21,6 +24,10 @@ h1 {
 }
 h2 {
   color: blue;
+  margin-top: 0;
+}
+.text-center {
+  text-align: center;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -206,4 +213,28 @@ label {
 
 input.validation-error {
   border-color: red;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1300px) {
+  .wrapper__expenses-tracker-app {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper__expenses-tracker-app {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 880px) {
+  .wrapper__expenses-tracker-app {
+    width: 90%;
+    grid-template-columns: 100%;
+    gap: 1.25rem;
+  }
 }
